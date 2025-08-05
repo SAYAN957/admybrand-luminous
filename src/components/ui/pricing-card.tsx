@@ -38,7 +38,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
       <GlassCard 
         variant={popular ? "elevated" : "default"}
         className={cn(
-          "h-full transition-all duration-300 hover:scale-105",
+          "h-full transition-all duration-300 hover:scale-105 flex flex-col",
           popular && "ring-2 ring-primary/50 shadow-2xl shadow-primary/20"
         )}
       >
@@ -51,7 +51,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
           </div>
         </div>
 
-        <ul className="space-y-3 mb-8">
+        <ul className="space-y-3 mb-8 flex-grow">
           {features.map((feature, index) => (
             <li key={index} className="flex items-center space-x-3">
               <Check className="w-5 h-5 text-primary flex-shrink-0" />

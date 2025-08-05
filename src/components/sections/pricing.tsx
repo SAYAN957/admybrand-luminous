@@ -3,6 +3,7 @@
 import * as React from "react"
 import { motion } from "framer-motion"
 import { PricingCard } from "@/components/ui/pricing-card"
+import { PricingCalculator } from "@/components/ui/pricing-calculator"
 import { Button } from "@/components/ui/button"
 import { GlassCard } from "@/components/ui/glass-card"
 import { Calculator, TrendingUp } from "lucide-react"
@@ -78,10 +79,9 @@ export const PricingSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient">Simple Pricing</span>
-            <br />
-            for Every Business
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <span className="text-gradient block">Simple Pricing</span>
+            <span className="block">for Every Business</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
             Choose the perfect plan for your business needs. All plans include a 14-day free trial 
@@ -100,7 +100,7 @@ export const PricingSection: React.FC = () => {
         </motion.div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-20">
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={index}
@@ -161,22 +161,11 @@ export const PricingSection: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Pricing Calculator Modal (placeholder) */}
-      {isCalculatorOpen && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <GlassCard variant="elevated" className="max-w-md w-full">
-            <div className="text-center">
-              <h3 className="text-2xl font-bold mb-4 text-gradient">ROI Calculator</h3>
-              <p className="text-muted-foreground mb-8">
-                Coming soon! Calculate your potential ROI with our interactive tool.
-              </p>
-              <Button onClick={() => setIsCalculatorOpen(false)}>
-                Close
-              </Button>
-            </div>
-          </GlassCard>
-        </div>
-      )}
+      {/* Pricing Calculator */}
+      <PricingCalculator
+        isOpen={isCalculatorOpen}
+        onClose={() => setIsCalculatorOpen(false)}
+      />
     </section>
   )
 }

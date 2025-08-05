@@ -19,7 +19,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
     <GlassCard 
       variant="elevated" 
       className={cn(
-        "text-center hover:scale-105 transition-all duration-300 group cursor-pointer",
+        "text-center hover:scale-105 transition-all duration-300 group cursor-pointer h-full flex flex-col",
         className
       )}
     >
@@ -31,7 +31,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
       <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-gradient transition-all duration-300">
         {title}
       </h3>
-      <p className="text-muted-foreground leading-relaxed">
+      <p className="text-muted-foreground leading-relaxed flex-grow">
         {description}
       </p>
     </GlassCard>

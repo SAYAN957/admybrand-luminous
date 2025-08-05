@@ -43,6 +43,24 @@ const blogPosts = [
     readTime: "7 min read",
     category: "Automation", 
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop"
+  },
+  {
+    title: "Personalization at Scale: AI-Driven Customer Experiences",
+    excerpt: "Discover how leading brands use AI to deliver personalized experiences to millions of customers while maintaining authenticity.",
+    author: "Lisa Zhang",
+    date: "Dec 5, 2024",
+    readTime: "9 min read",
+    category: "Personalization",
+    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=200&fit=crop"
+  },
+  {
+    title: "The ROI of Voice Marketing: Optimizing for Audio Platforms",
+    excerpt: "Learn how to leverage voice search and audio advertising to reach customers in the growing audio-first ecosystem.",
+    author: "Michael Torres",
+    date: "Dec 3, 2024",
+    readTime: "6 min read",
+    category: "Voice Marketing",
+    image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=400&h=200&fit=crop"
   }
 ]
 
@@ -64,7 +82,7 @@ export const BlogSection: React.FC = () => {
         >
           <div className="flex items-center justify-center mb-6">
             <TrendingUp className="w-8 h-8 text-primary mr-3" />
-            <h2 className="text-5xl md:text-6xl font-bold">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               <span className="text-gradient">Latest Insights</span>
             </h2>
           </div>
@@ -75,7 +93,7 @@ export const BlogSection: React.FC = () => {
         </motion.div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
           {/* Featured Post */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
