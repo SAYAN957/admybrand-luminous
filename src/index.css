@@ -221,3 +221,25 @@ All colors MUST be HSL.
   0% { transform: translateX(-100%); }
   100% { transform: translateX(100%); }
 }
+
+/* Hide Lovable badge */
+iframe[src*="lovable.dev"] {
+  display: none !important;
+}
+
+[data-lovable-badge] {
+  display: none !important;
+}
+
+.lovable-badge {
+  display: none !important;
+}
+
+/* Hide any floating edit buttons or badges */
+[class*="lovable"]:not(.lovable-dev):not(.lovable-app) {
+  display: none !important;
+}
+
+[class*="edit"]:last-child:only-child:not([class*="editor"]):not([class*="editing"]) {
+  display: none !important;
+}

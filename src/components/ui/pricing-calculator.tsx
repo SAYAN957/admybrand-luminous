@@ -171,24 +171,24 @@ export const PricingCalculator: React.FC<PricingCalculatorProps> = ({
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <Plus className="w-5 h-5 text-primary" />
-                    <Label className="text-lg font-semibold">Optional Add-ons</Label>
+                    <Label className="text-lg font-semibold text-foreground">Optional Add-ons</Label>
                   </div>
                   <div className="space-y-4">
-                    {Object.entries(addOnPrices).map(([addon, price]) => (
-                      <div key={addon} className="flex items-center justify-between p-4 glass rounded-lg">
-                        <div>
-                          <Label className="capitalize font-medium text-foreground">
+                     {Object.entries(addOnPrices).map(([addon, price]) => (
+                      <div key={addon} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 glass rounded-lg space-y-3 sm:space-y-0">
+                        <div className="flex-1 min-w-0">
+                          <Label className="capitalize font-medium text-foreground block">
                             {addon === 'whiteLabel' ? 'White Label' : addon}
                           </Label>
-                          <p className="text-sm text-foreground/70">
+                          <p className="text-sm text-foreground opacity-90 break-words">
                             {addon === 'analytics' && 'Advanced analytics dashboard'}
                             {addon === 'integrations' && 'Premium integrations'}
                             {addon === 'whiteLabel' && 'White-label solution'}
                             {addon === 'support' && 'Priority support'}
                           </p>
                         </div>
-                        <div className="flex items-center space-x-3">
-                          <span className="text-sm font-semibold">+${price}/mo</span>
+                        <div className="flex items-center justify-between sm:justify-end space-x-3 flex-shrink-0">
+                          <span className="text-sm font-semibold whitespace-nowrap">+${price}/mo</span>
                           <Switch
                             checked={addOns[addon as keyof typeof addOns]}
                             onCheckedChange={(checked) =>

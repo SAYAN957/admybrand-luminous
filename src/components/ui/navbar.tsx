@@ -39,10 +39,17 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <ThemeToggle />
             <Button variant="ghost">Sign In</Button>
-            <Button variant="gradient">Try for Free</Button>
+            <Button variant="gradient" className="whitespace-nowrap">Try for Free</Button>
+          </div>
+
+          {/* Tablet CTA */}
+          <div className="hidden md:flex lg:hidden items-center space-x-2">
+            <ThemeToggle />
+            <Button variant="ghost" size="sm">Sign In</Button>
+            <Button variant="gradient" size="sm" className="text-xs px-3">Try Free</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -53,7 +60,7 @@ export const Navbar: React.FC = () => {
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
