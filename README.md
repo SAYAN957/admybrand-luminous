@@ -167,25 +167,6 @@ npm run test:coverage
 npm run test:watch
 ```
 
-## 📦 Deployment
-
-### Vercel (Recommended)
-1. Connect your GitHub repository to Vercel
-2. Set build command: `npm run build`
-3. Set output directory: `dist`
-4. Deploy automatically on push
-
-### Netlify
-1. Connect repository to Netlify
-2. Build command: `npm run build`
-3. Publish directory: `dist`
-4. Deploy
-
-### Manual Deployment
-```bash
-npm run build
-# Upload the 'dist' folder to your hosting provider
-```
 
 ## 🤝 Contributing
 
@@ -195,42 +176,6 @@ npm run build
 4. Push to branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Support
-
-### Documentation
-- [Component Library](docs/components.md)
-- [API Reference](docs/api.md)
-- [Deployment Guide](docs/deployment.md)
-
-### Get Help
-- **Email**: support@admybrand.ai
-- **Phone**: +91 (555) 123-4567
-- **Location**: Mumbai, India
-- **Live Chat**: Available on website
-- **GitHub Issues**: Report bugs and request features
-
-## 🎯 Roadmap
-
-- [ ] Advanced analytics dashboard
-- [ ] Real-time collaboration features
-- [ ] Mobile application
-- [ ] API integrations marketplace
-- [ ] White-label solutions
-- [ ] Enterprise SSO
-- [ ] Advanced AI model customization
-
-## 📊 Analytics & Monitoring
-
-The platform includes built-in analytics for:
-- User engagement tracking
-- Performance monitoring
-- Error tracking and reporting
-- A/B testing capabilities
-- Conversion funnel analysis
 
 ---
 
