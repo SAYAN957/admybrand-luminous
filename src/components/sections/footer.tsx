@@ -135,11 +135,11 @@ export const Footer: React.FC = () => {
                   </div>
                   <div className="flex items-center space-x-3 text-muted-foreground hover:text-foreground transition-colors">
                     <Phone className="w-5 h-5 text-primary" />
-                    <span>+1 (555) 123-4567</span>
+                    <span>+91 (555) 123-4567</span>
                   </div>
                   <div className="flex items-center space-x-3 text-muted-foreground hover:text-foreground transition-colors">
                     <MapPin className="w-5 h-5 text-primary" />
-                    <span>San Francisco, CA</span>
+                    <span>Mumbai, India</span>
                   </div>
                 </div>
 
@@ -207,7 +207,7 @@ export const Footer: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               <div className="flex items-center space-x-2 text-muted-foreground">
-                <span>© 2024 ADmyBRAND AI Suite. All rights reserved.</span>
+                <span>© 2025 ADmyBRAND AI Suite. All rights reserved.</span>
               </div>
               
               <div className="flex items-center space-x-2 text-muted-foreground">

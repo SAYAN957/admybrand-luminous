@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { GlassCard } from "@/components/ui/glass-card"
 import { Play, ArrowRight, Sparkles } from "lucide-react"
+import heroDashboard from "@/assets/hero-dashboard.jpg"
 
 export const HeroSection: React.FC = () => {
   return (
@@ -80,68 +81,89 @@ export const HeroSection: React.FC = () => {
             </Button>
           </motion.div>
 
-          {/* Social Proof */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9, duration: 0.8 }}
-            className="pt-12 flex flex-col items-center space-y-4"
-          >
-            <p className="text-sm text-muted-foreground">
-              Trusted by 50,000+ marketing teams worldwide
-            </p>
-            <div className="flex items-center space-x-8 opacity-60">
-              {/* Placeholder for company logos */}
-              <div className="h-8 w-24 bg-gradient-to-r from-muted to-muted/50 rounded animate-pulse" />
-              <div className="h-8 w-20 bg-gradient-to-r from-muted to-muted/50 rounded animate-pulse" />
-              <div className="h-8 w-28 bg-gradient-to-r from-muted to-muted/50 rounded animate-pulse" />
-              <div className="h-8 w-22 bg-gradient-to-r from-muted to-muted/50 rounded animate-pulse" />
-            </div>
-          </motion.div>
         </motion.div>
 
-        {/* Hero Visual - Demo Video */}
+        {/* Trusted By Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9, duration: 0.8 }}
+          className="mt-16 mb-8 flex flex-col items-center space-y-8"
+        >
+          <p className="text-sm text-muted-foreground">
+            Trusted by 50,000+ marketing teams worldwide
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
+            {/* ROI Box */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.0, duration: 0.6 }}
+              className="glass rounded-2xl p-6 bg-gradient-to-br from-primary/10 to-primary-glow/10 border border-primary/20 backdrop-blur-sm text-center"
+            >
+              <div className="text-3xl font-bold text-gradient mb-2">+247%</div>
+              <p className="text-sm text-muted-foreground">Average ROI Increase</p>
+              <div className="mt-3 text-xs text-primary font-medium">Verified Results</div>
+            </motion.div>
+
+            {/* Teams Box */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.1, duration: 0.6 }}
+              className="glass rounded-2xl p-6 bg-gradient-to-br from-primary/10 to-primary-glow/10 border border-primary/20 backdrop-blur-sm text-center"
+            >
+              <div className="text-3xl font-bold text-gradient mb-2">50K+</div>
+              <p className="text-sm text-muted-foreground">Marketing Teams</p>
+              <div className="mt-3 text-xs text-primary font-medium">Active Users</div>
+            </motion.div>
+
+            {/* AI Optimized Box */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.2, duration: 0.6 }}
+              className="glass rounded-2xl p-6 bg-gradient-to-br from-primary/10 to-primary-glow/10 border border-primary/20 backdrop-blur-sm text-center"
+            >
+              <div className="text-3xl font-bold text-gradient mb-2">AI</div>
+              <p className="text-sm text-muted-foreground">Powered Platform</p>
+              <div className="mt-3 text-xs text-primary font-medium">Advanced Analytics</div>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Hero Visual - AI Dashboard Image */}
         <motion.div
           initial={{ opacity: 0, y: 50, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ delay: 1.1, duration: 1 }}
-          className="mt-20 relative"
+          transition={{ delay: 1.3, duration: 1 }}
+          className="mt-12 relative"
         >
-          <GlassCard variant="elevated" className="max-w-4xl mx-auto p-8 transform perspective-1000 rotate-x-12">
-            <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary-glow/20 rounded-lg flex items-center justify-center relative overflow-hidden cursor-pointer group">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
+          <GlassCard variant="elevated" className="max-w-5xl mx-auto p-4 md:p-8 transform perspective-1000">
+            <div className="relative overflow-hidden rounded-xl group cursor-pointer">
+              <img
+                src={heroDashboard}
+                alt="ADmyBRAND AI Dashboard"
+                className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+              />
               
-              {/* Demo Video Content */}
-              <div className="text-center z-10 group-hover:scale-105 transition-transform duration-300">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary-glow rounded-full mx-auto mb-4 flex items-center justify-center animate-pulse group-hover:animate-none group-hover:scale-110 transition-all duration-300">
-                  <Play className="w-8 h-8 text-primary-foreground group-hover:scale-125 transition-transform duration-300" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-foreground">Watch AI in Action</h3>
-                <p className="text-muted-foreground mb-1">See how our dark/light mode adapts</p>
-                <p className="text-sm text-primary font-medium">Click to play demo</p>
-              </div>
-
-              {/* Interactive Demo Mockup */}
-              <div className="absolute inset-4 border border-white/20 rounded-lg bg-background/10 backdrop-blur-sm opacity-30 group-hover:opacity-50 transition-opacity duration-300">
-                <div className="flex items-center justify-between p-3 border-b border-white/10">
-                  <div className="flex space-x-2">
-                    <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  </div>
-                  <div className="text-xs text-white/70">ADmyBRAND AI Dashboard</div>
-                </div>
-                <div className="p-4 space-y-2">
-                  <div className="h-2 bg-primary/30 rounded animate-pulse"></div>
-                  <div className="h-2 bg-primary-glow/20 rounded animate-pulse delay-100"></div>
-                  <div className="h-2 bg-primary/40 rounded animate-pulse delay-200"></div>
-                </div>
+              {/* Floating Stats */}
+              <div className="absolute top-4 left-4 bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold animate-bounce">
+                +247% ROI
               </div>
               
-              {/* Floating elements */}
-              <div className="absolute top-4 left-4 w-3 h-3 bg-primary rounded-full animate-bounce" />
-              <div className="absolute top-8 right-8 w-2 h-2 bg-primary-glow rounded-full animate-bounce delay-300" />
-              <div className="absolute bottom-6 left-8 w-4 h-4 bg-primary/50 rounded-full animate-bounce delay-500" />
+              <div className="absolute top-4 right-4 bg-gradient-to-r from-primary-glow to-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold animate-bounce delay-300">
+                AI Optimized
+              </div>
+              
+              {/* Interactive overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-8">
+                <div className="text-center text-white">
+                  <h3 className="text-xl font-semibold mb-2">Experience AI-Powered Marketing</h3>
+                  <p className="text-sm opacity-90">Click to explore our interactive dashboard</p>
+                </div>
+              </div>
             </div>
           </GlassCard>
         </motion.div>

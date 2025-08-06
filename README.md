@@ -1,73 +1,243 @@
-# Welcome to your Lovable project
+# ADmyBRAND AI Suite - Marketing Intelligence Platform
 
-## Project info
+A cutting-edge AI-powered marketing platform built with React, TypeScript, and modern web technologies. Transform your marketing strategy with intelligent automation, predictive analytics, and personalized customer experiences.
 
-**URL**: https://lovable.dev/projects/f60d348b-25a9-43f5-afdc-690ff0437745
+![ADmyBRAND Dashboard](src/assets/hero-dashboard.jpg)
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+### Core AI Capabilities
+- **AI-Powered Content Generation** - Create compelling marketing content with advanced AI algorithms
+- **Smart Audience Targeting** - Precision targeting powered by machine learning and behavioral analytics
+- **Predictive Analytics** - Forecast campaign performance with 94% accuracy
+- **Real-Time Optimization** - Automatically optimize campaigns based on performance data
+- **Brand Intelligence** - Monitor sentiment, track competitors, and identify market opportunities
+- **Multi-Channel Automation** - Seamlessly manage campaigns across all digital channels
 
-**Use Lovable**
+### Platform Features
+- **Interactive Pricing Calculator** - Dynamic pricing based on team size, ad spend, and campaigns
+- **Dark/Light Theme Toggle** - Adaptive UI that works perfectly in both modes
+- **Responsive Design** - Optimized for desktop, tablet, and mobile devices
+- **Glass Morphism UI** - Modern, elegant design with glassmorphism effects
+- **Smooth Animations** - Framer Motion powered animations for enhanced UX
+- **FAQ Section** - Comprehensive frequently asked questions
+- **Blog/Insights** - Latest marketing insights and industry trends
+- **Contact Forms** - Multiple ways to get in touch and start trials
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f60d348b-25a9-43f5-afdc-690ff0437745) and start prompting.
+## 🛠️ Technology Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend**: React 18, TypeScript
+- **Styling**: Tailwind CSS with custom design system
+- **Animations**: Framer Motion
+- **UI Components**: Radix UI primitives with custom styling
+- **Icons**: Lucide React
+- **Build Tool**: Vite
+- **Routing**: React Router DOM
+- **State Management**: React Hooks
+- **Form Handling**: React Hook Form + Zod validation
+- **Charts**: Recharts for data visualization
 
-**Use your preferred IDE**
+## 📋 Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Before you begin, ensure you have the following installed:
+- **Node.js** (version 18.0.0 or higher)
+- **npm** or **yarn** package manager
+- **Git** for version control
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Quick Start
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/admybrand-ai-suite.git
+cd admybrand-ai-suite
 ```
 
-**Edit a file directly in GitHub**
+### 2. Install Dependencies
+```bash
+npm install
+# or
+yarn install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 3. Start Development Server
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-**Use GitHub Codespaces**
+The application will open at `http://localhost:5173`
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### 4. Build for Production
+```bash
+npm run build
+# or
+yarn build
+```
 
-## What technologies are used for this project?
+### 5. Preview Production Build
+```bash
+npm run preview
+# or
+yarn preview
+```
 
-This project is built with:
+## 📁 Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+src/
+├── assets/                 # Images and static assets
+├── components/            # Reusable React components
+│   ├── sections/         # Page sections (Hero, Features, etc.)
+│   └── ui/              # UI components (Button, Card, etc.)
+├── hooks/                # Custom React hooks
+├── lib/                  # Utility functions and configurations
+├── pages/               # Page components
+├── styles/              # Global CSS and Tailwind config
+└── main.tsx            # Application entry point
+```
 
-## How can I deploy this project?
+## 🎨 Design System
 
-Simply open [Lovable](https://lovable.dev/projects/f60d348b-25a9-43f5-afdc-690ff0437745) and click on Share -> Publish.
+The project uses a comprehensive design system built with Tailwind CSS:
 
-## Can I connect a custom domain to my Lovable project?
+### Color Palette
+- **Primary**: Purple gradient tones for brand elements
+- **Secondary**: Teal/cyan accents for highlights
+- **Background**: Adaptive dark/light backgrounds
+- **Foreground**: High contrast text colors
+- **Muted**: Secondary text and subtle elements
 
-Yes, you can!
+### Typography
+- **Font Family**: Inter (system font fallback)
+- **Scale**: Responsive typography from mobile to desktop
+- **Weights**: 400, 500, 600, 700, 800
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Components
+- **Glass Cards**: Glassmorphism effect with backdrop blur
+- **Buttons**: Multiple variants (primary, secondary, outline, ghost)
+- **Forms**: Consistent form styling with validation states
+- **Navigation**: Responsive navbar with mobile menu
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🔧 Configuration
+
+### Environment Variables
+Create a `.env.local` file in the root directory:
+```bash
+VITE_APP_TITLE=ADmyBRAND AI Suite
+VITE_API_URL=your-api-url
+```
+
+### Tailwind Configuration
+The design system is configured in `tailwind.config.ts` with custom:
+- Colors and gradients
+- Animations and transitions
+- Typography scales
+- Spacing and sizing
+- Component utilities
+
+## 📱 Responsive Design
+
+The application is fully responsive with breakpoints:
+- **Mobile**: 320px - 767px
+- **Tablet**: 768px - 1023px
+- **Desktop**: 1024px and above
+
+## 🎭 Animations
+
+Powered by Framer Motion with:
+- Page load animations
+- Scroll-triggered animations
+- Hover and interaction effects
+- Theme transition animations
+- Component state transitions
+
+## 🔍 SEO & Performance
+
+- **Semantic HTML**: Proper heading hierarchy and landmarks
+- **Meta Tags**: Comprehensive meta tag setup
+- **Performance**: Optimized images and lazy loading
+- **Accessibility**: WCAG compliant components
+- **Core Web Vitals**: Optimized for Google's performance metrics
+
+## 🧪 Testing
+
+```bash
+# Run tests
+npm run test
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run tests in watch mode
+npm run test:watch
+```
+
+## 📦 Deployment
+
+### Vercel (Recommended)
+1. Connect your GitHub repository to Vercel
+2. Set build command: `npm run build`
+3. Set output directory: `dist`
+4. Deploy automatically on push
+
+### Netlify
+1. Connect repository to Netlify
+2. Build command: `npm run build`
+3. Publish directory: `dist`
+4. Deploy
+
+### Manual Deployment
+```bash
+npm run build
+# Upload the 'dist' folder to your hosting provider
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit changes: `git commit -m 'Add amazing feature'`
+4. Push to branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+### Documentation
+- [Component Library](docs/components.md)
+- [API Reference](docs/api.md)
+- [Deployment Guide](docs/deployment.md)
+
+### Get Help
+- **Email**: support@admybrand.ai
+- **Phone**: +91 (555) 123-4567
+- **Location**: Mumbai, India
+- **Live Chat**: Available on website
+- **GitHub Issues**: Report bugs and request features
+
+## 🎯 Roadmap
+
+- [ ] Advanced analytics dashboard
+- [ ] Real-time collaboration features
+- [ ] Mobile application
+- [ ] API integrations marketplace
+- [ ] White-label solutions
+- [ ] Enterprise SSO
+- [ ] Advanced AI model customization
+
+## 📊 Analytics & Monitoring
+
+The platform includes built-in analytics for:
+- User engagement tracking
+- Performance monitoring
+- Error tracking and reporting
+- A/B testing capabilities
+- Conversion funnel analysis
+
+---
+
+**Built with ❤️ in India** | **© 2025 ADmyBRAND. All rights reserved.**

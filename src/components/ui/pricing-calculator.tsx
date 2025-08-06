@@ -177,10 +177,10 @@ export const PricingCalculator: React.FC<PricingCalculatorProps> = ({
                     {Object.entries(addOnPrices).map(([addon, price]) => (
                       <div key={addon} className="flex items-center justify-between p-4 glass rounded-lg">
                         <div>
-                          <Label className="capitalize font-medium">
+                          <Label className="capitalize font-medium text-foreground">
                             {addon === 'whiteLabel' ? 'White Label' : addon}
                           </Label>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-sm text-foreground/70">
                             {addon === 'analytics' && 'Advanced analytics dashboard'}
                             {addon === 'integrations' && 'Premium integrations'}
                             {addon === 'whiteLabel' && 'White-label solution'}

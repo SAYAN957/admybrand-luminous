@@ -93,119 +93,68 @@ export const BlogSection: React.FC = () => {
         </motion.div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
-          {/* Featured Post */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="lg:col-span-2"
-          >
-            <GlassCard variant="elevated" className="overflow-hidden group cursor-pointer hover:scale-[1.02] transition-all duration-300">
-              <div className="aspect-video relative overflow-hidden rounded-t-2xl">
-                <img
-                  src={blogPosts[0].image}
-                  alt={blogPosts[0].title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
-                    Featured
-                  </span>
-                </div>
-              </div>
-              
-              <div className="p-8">
-                <div className="flex items-center space-x-4 text-sm text-muted-foreground mb-4">
-                  <span className="bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">
-                    {blogPosts[0].category}
-                  </span>
-                  <div className="flex items-center space-x-1">
-                    <Calendar className="w-4 h-4" />
-                    <span>{blogPosts[0].date}</span>
-                  </div>
-                  <span>{blogPosts[0].readTime}</span>
-                </div>
-                
-                <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-gradient transition-all duration-300">
-                  {blogPosts[0].title}
-                </h3>
-                
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  {blogPosts[0].excerpt}
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-primary/20 to-primary-glow/20 rounded-full flex items-center justify-center">
-                      <User className="w-5 h-5 text-primary" />
-                    </div>
-                    <span className="font-medium text-foreground">{blogPosts[0].author}</span>
-                  </div>
-                  
-                  <Button variant="ghost" className="group/btn">
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
-                </div>
-              </div>
-            </GlassCard>
-          </motion.div>
-
-          {/* Regular Posts */}
-          <div className="space-y-6">
-            {blogPosts.slice(1).map((post, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <GlassCard variant="elevated" className="group cursor-pointer hover:scale-[1.02] transition-all duration-300">
-                  <div className="aspect-video relative overflow-hidden rounded-t-2xl">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="flex items-center space-x-3 text-xs text-muted-foreground mb-3">
-                      <span className="bg-primary/10 text-primary px-2 py-1 rounded-full font-medium">
-                        {post.category}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-16">
+          {blogPosts.map((post, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <GlassCard variant="elevated" className="group cursor-pointer hover:scale-[1.02] transition-all duration-300 h-full flex flex-col">
+                <div className="aspect-video relative overflow-hidden rounded-t-2xl">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  {post.featured && (
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
+                        Featured
                       </span>
-                      <div className="flex items-center space-x-1">
-                        <Calendar className="w-3 h-3" />
-                        <span>{post.date}</span>
-                      </div>
                     </div>
-                    
-                    <h4 className="font-bold text-foreground mb-3 group-hover:text-gradient transition-all duration-300 leading-tight">
-                      {post.title}
-                    </h4>
-                    
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                      {post.excerpt}
-                    </p>
-                    
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-8 h-8 bg-gradient-to-br from-primary/20 to-primary-glow/20 rounded-full flex items-center justify-center">
-                          <User className="w-4 h-4 text-primary" />
-                        </div>
-                        <span className="text-sm font-medium text-foreground">{post.author}</span>
-                      </div>
-                      
-                      <span className="text-xs text-muted-foreground">{post.readTime}</span>
+                  )}
+                </div>
+                
+                <div className="p-6 flex-1 flex flex-col">
+                  <div className="flex items-center space-x-3 text-xs text-muted-foreground mb-3">
+                    <span className="bg-primary/10 text-primary px-2 py-1 rounded-full font-medium">
+                      {post.category}
+                    </span>
+                    <div className="flex items-center space-x-1">
+                      <Calendar className="w-3 h-3" />
+                      <span>{post.date}</span>
                     </div>
+                    <span>{post.readTime}</span>
                   </div>
-                </GlassCard>
-              </motion.div>
-            ))}
-          </div>
+                  
+                  <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-gradient transition-all duration-300 leading-tight flex-shrink-0">
+                    {post.title}
+                  </h3>
+                  
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center justify-between mt-auto">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-8 h-8 bg-gradient-to-br from-primary/20 to-primary-glow/20 rounded-full flex items-center justify-center">
+                        <User className="w-4 h-4 text-primary" />
+                      </div>
+                      <span className="text-sm font-medium text-foreground">{post.author}</span>
+                    </div>
+                    
+                    <Button variant="ghost" size="sm" className="group/btn">
+                      Read More
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </div>
+                </div>
+              </GlassCard>
+            </motion.div>
+          ))}
         </div>
 
         {/* View All Button */}
