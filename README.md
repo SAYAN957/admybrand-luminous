@@ -121,12 +121,6 @@ The project uses a comprehensive design system built with Tailwind CSS:
 
 ## 🔧 Configuration
 
-### Environment Variables
-Create a `.env.local` file in the root directory:
-```bash
-VITE_APP_TITLE=ADmyBRAND AI Suite
-VITE_API_URL=your-api-url
-```
 
 ### Tailwind Configuration
 The design system is configured in `tailwind.config.ts` with custom:
